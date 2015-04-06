@@ -1,0 +1,22 @@
+strong{
+	font-weight: $strong-weight;
+	text-shadow: $strong-text_shadow;
+	color: $strong-color;
+	font-size: $strong-text_size;
+}
+
+.seam{
+	border: 0px;
+	border-style: solid;
+	border-color: darken($black, 20%);
+
+	&.bottom{
+		border-bottom-width: 2px;
+		box-shadow: 0 1px 0 0 lighten($black, 15%), 0 2px 2px lighten($black, 10%);
+	}
+
+	&.top{
+		box-shadow: 0 -1px 0 0 lighten($black, 15%), 0 -2px 2px lighten($black, 10%);
+		border-top-width: 2px;
+	}
+}

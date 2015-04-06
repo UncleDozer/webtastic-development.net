@@ -1,0 +1,72 @@
+//Defaults
+
+*{
+	box-sizing: border-box;
+}
+
+html {
+ font-size: 62.5%;
+}
+
+body {
+	background: $base-bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include header-font_stack();
+	color: $header-color;
+	width: auto;
+	height: auto;
+}
+
+h1 {
+	font-family: $header-family;
+	font-weight: $header-weight;
+}
+
+h2 {
+	font-family: $subheader-family;
+	font-size: $h2-size;
+	font-weight: $h2-weight;
+	text-shadow: $shadow-text;
+	letter-spacing: 2px;
+}
+
+h3 {
+	font-size: $h3-size;
+}
+
+p{
+	color: $body-color;
+	@include body-font_stack;
+}
+
+a {
+	@include body-font_stack($link-weight, $link-size);
+	color: $link-color;
+	outline: none;
+
+	&:visited{
+		color: $link-visited_color;
+		font-weight: $link-visited-weight;
+	}
+
+	&:hover, &:focus{
+		color: $link-hover_color;
+	}
+}
+
+.code-caption{
+	display: block;
+	text-align: right;
+	font-weight: $font-weight_light;
+	color: darken($white, 45%);
+	margin-bottom: 15px;
+	margin-top: 9px;
+	font-style: italic;
+}

@@ -1,0 +1,17 @@
+header{
+	margin-bottom: 95px;
+
+	h1{
+		display: block;
+		padding: 35px 0 10px 65px;
+		text-shadow: $shadow-text;
+		word-spacing: 10px;
+
+		&:first-letter{
+			display: block;
+			font-size: 8.0rem;
+			text-shadow: $shadow-first_letter;
+		}
+	}
+}
+
