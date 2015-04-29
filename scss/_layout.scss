@@ -1,3 +1,4 @@
+//Layout.scss
 //Defaults
 
 *{
@@ -27,6 +28,9 @@ h6 {
 h1 {
 	font-family: $header-family;
 	font-weight: $header-weight;
+	padding: 35px 0 10px 65px;
+	text-shadow: $shadow-text;
+	word-spacing: 10px;
 }
 
 h2 {
@@ -60,6 +64,14 @@ a {
 		color: $link-hover_color;
 	}
 }
+
+strong{
+	font-weight: $strong-weight;
+	text-shadow: $strong-text_shadow;
+	color: $strong-color;
+	font-size: $strong-text_size;
+}
+
 
 .code-caption{
 	display: block;

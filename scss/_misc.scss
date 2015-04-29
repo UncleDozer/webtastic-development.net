@@ -1,10 +1,3 @@
-strong{
-	font-weight: $strong-weight;
-	text-shadow: $strong-text_shadow;
-	color: $strong-color;
-	font-size: $strong-text_size;
-}
-
 .seam{
 	border: 0px;
 	border-style: solid;
@@ -16,7 +9,7 @@ strong{
 	}
 
 	&.top{
-		box-shadow: 0 -1px 0 0 lighten($black, 15%), 0 -2px 2px lighten($black, 10%);
+		box-shadow: 0 -1px 0 0 lighten($black, 10%), 0 2px 5px lighten($black, 15%);
 		border-top-width: 2px;
 	}
 }

@@ -1,15 +1,14 @@
 @import url(normalize.css);
-header {
-  margin-bottom: 95px; }
-  header h1 {
-    display: block;
-    padding: 35px 0 10px 65px;
-    text-shadow: 1px 5px rgba(0, 0, 0, 0.3);
-    word-spacing: 10px; }
-    header h1:first-letter {
-      display: block;
-      font-size: 8rem;
-      text-shadow: 5px 7px rgba(0, 0, 0, 0.3); }
+.seam {
+  border: 0px;
+  border-style: solid;
+  border-color: black; }
+  .seam.bottom {
+    border-bottom-width: 2px;
+    box-shadow: 0 1px 0 0 #404040, 0 2px 2px #343434; }
+  .seam.top {
+    box-shadow: 0 -1px 0 0 #343434, 0 2px 5px #404040;
+    border-top-width: 2px; }
 
 code {
   display: block;
@@ -25,28 +24,30 @@ code {
   border-top: 2px solid #404040;
   text-shadow: 1px 2px rgba(0, 0, 0, 0.3); }
 
-strong {
-  font-weight: 600;
-  text-shadow: 1px 5px rgba(0, 0, 0, 0.3);
-  color: #F1F3F4;
-  font-size: 1.8rem; }
+header {
+  margin-bottom: 95px; }
+  header h1 {
+    display: block;
+    padding: 35px 0 10px 65px;
+    text-shadow: 1px 5px rgba(0, 0, 0, 0.3);
+    word-spacing: 10px; }
+    header h1:first-letter {
+      display: block;
+      font-size: 8rem;
+      text-shadow: 5px 7px rgba(0, 0, 0, 0.3); }
 
-.seam {
-  border: 0px;
-  border-style: solid;
-  border-color: black; }
-  .seam.bottom {
-    border-bottom-width: 2px;
-    box-shadow: 0 1px 0 0 #404040, 0 2px 2px #343434; }
-  .seam.top {
-    box-shadow: 0 -1px 0 0 #404040, 0 -2px 2px #343434;
-    border-top-width: 2px; }
+footer .footer-head {
+  position: relative;
+  display: inline-block;
+  color: #FF2E4C;
+  font-size: 4.73684rem;
+  padding-top: 15px; }
 
-.head-right, .head-left {
+.head-right, .footer-right, .head-left, .footer-left {
   width: 48%;
   display: inline-block; }
 
-.head-right nav {
+.head-right nav, .footer-right nav {
   position: relative;
   left: 48%; }
 
@@ -64,8 +65,9 @@ nav {
 
 article {
   position: relative;
-  left: 24%;
-  width: 48%; }
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%; }
 
 * {
   box-sizing: border-box; }
@@ -86,7 +88,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-family: 'bebas_neuebold', 'Open Sans', sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  padding: 35px 0 10px 65px;
+  text-shadow: 1px 5px rgba(0, 0, 0, 0.3);
+  word-spacing: 10px; }
 
 h2 {
   font-family: 'bebas_neuelight', 'Open Sans', sans-serif;
@@ -119,6 +124,12 @@ a {
     font-weight: 300; }
   a:hover, a:focus {
     color: #87FFAF; }
+
+strong {
+  font-weight: 600;
+  text-shadow: 1px 5px rgba(0, 0, 0, 0.3);
+  color: #F1F3F4;
+  font-size: 1.8rem; }
 
 .code-caption {
   display: block;

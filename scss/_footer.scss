@@ -1,0 +1,10 @@
+$foot-head_color: $red;
+footer{
+    .footer-head{
+        position: relative;
+        display: inline-block;
+        color: $foot-head_color;
+        font-size: $foot-header / .95;
+        padding-top: 15px;
+    }
+}

@@ -1,34 +1,42 @@
 .head-right, .head-left{
-	width: 48%;
-	display: inline-block;
+    width: 48%;
+    display: inline-block;
 }
 
 .head-right{
-	nav{
-		position: relative;
-		left: 48%;
-	}
+    nav{
+        position: relative;
+        left: 48%;
+    }
+}
+
+.footer-right{
+    @extend .head-right;
+}
+
+.footer-left{
+    @extend .head-left;
 }
 
 ul{
-	list-style: none !important;
-	padding-left: none;
+    list-style: none !important;
+    padding-left: none;
 }
 
 nav{
-	float: left;
-	li{
-		display: inline-block;
-		margin: 0 10px;
-	}
+    float: left;
+    li{
+        display: inline-block;
+        margin: 0 10px;
+    }
 
-	a{
-		text-shadow: $shadow-text_small;
-	}
+    a{
+        text-shadow: $shadow-text_small;
+    }
 }
 
 article {
-	position: relative;
-	left: 24%;
-	width: 48%;
+    position: relative;
+    margin-left: auto; margin-right: auto;
+    width: 65%;
 }

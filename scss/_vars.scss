@@ -1,60 +1,56 @@
 // COLORS
-//{{{
 $light_blue : #009fff;
 $dark_blue  : #60A8CD;
 $green      : #87FFAF;
 $red        : #FF2E4C;
+$dark_red   : darken($red, 25%);
 $white      : #F1F3F4;
 $black      : #1A1A1A;
-//}}}
+
+// BREAKPOINTS
 
 
 // STYLES
-//{{{
 // Colors
-$base-bg: $black;
+$base-bg             : $black;
 
 // Shadows
-$shadow-down: 0px 5px 0 3px rgba(black, .3);
-$shadow-left_down: -3px 5px 0 3px rgba(black, .3);
-$shadow-right_down: 3px 5px 0 3px rgba(black, .3);
-//$shadow-solid: 0 2px 0px rgba(grey, .6);
-$shadow-solid: inset 0 -5px 0 -2px rgba(black, .6);
-//}}}
+$shadow-down         : 0px 5px 0 3px rgba(black, .3);
+$shadow-left_down    : -3px 5px 0 3px rgba(black, .3);
+$shadow-right_down   : 3px 5px 0 3px rgba(black, .3);
+//$shadow-solid      : 0 2px 0px rgba(grey, .6);
+$shadow-solid        : inset 0 -5px 0 -2px rgba(black, .6);
 
 
 // FONT VARIABLES
-//{{{
 
 // Font Families
-$header-family: 'bebas_neuebold', 'Open Sans', sans-serif;
-$subheader-family: 'bebas_neuelight', 'Open Sans', sans-serif;
-$body-family: 'Aileron', 'Arial', sans-serif;
-$mono-family: 'monofur for Powerline', 'Droid Sans Mono';
+$header-family       : 'bebas_neuebold', 'Open Sans', sans-serif;
+$subheader-family    : 'bebas_neuelight', 'Open Sans', sans-serif;
+$body-family         : 'Aileron', 'Arial', sans-serif;
+$mono-family         : 'monofur for Powerline', 'Droid Sans Mono';
 
 // Weights
-$font-weight_light  : 300;
-$font-weight_reg    : 400;
-$font-weight_bold   : 600;
-$font-weight_bolder : 700;
+$font-weight_light   : 300;
+$font-weight_reg     : 400;
+$font-weight_bold    : 600;
+$font-weight_bolder  : 700;
 
 // Size
-$font-size_small    : .9rem;
-$font-size_reg      : 1.6rem;
-$font-size_tall     : 2.0rem;
-$font-size_taller   : 2.6rem;
-$font-size_tallest  : 4.5rem;
-//}}}
+$font-size_small     : .9rem;
+$font-size_reg       : 1.6rem;
+$font-size_tall      : 2.0rem;
+$font-size_taller    : 2.6rem;
+$font-size_tallest   : 4.5rem;
 
 
 // FONT STYLE
-//{{{
 
 // Text Shadows
 
-$shadow-text: 1px 5px rgba(black, .3);
-$shadow-text_small: 1px 2px rgba(black,.3);
-$shadow-first_letter: 5px 7px rgba(black, .3);
+$shadow-text         : 1px 5px rgba(black, .3);
+$shadow-text_small   : 1px 2px rgba(black,.3);
+$shadow-first_letter : 5px 7px rgba(black, .3);
 
 // Links
 $link-color          : $light_blue;
@@ -68,6 +64,7 @@ $link-hover_color    : $green;
 $header-color        : $red;
 $header-weight       : $font-weight_reg;
 $h1-size             : $font-size_tallest;
+$foot-header         : $font-size_tallest;
 
 $h2-size             : $font-size_taller;
 $h2-weight           : $font-weight_bold;
@@ -96,26 +93,32 @@ $strong-color        : $white;
 $strong-text_shadow  : $shadow-text;
 $strong-text_size    : $body-size + .2;
 $strong-weight       : $font-weight_bold;
-//}}}
 
 
 // MIXINS
-//{{{
-// Fonts
 
+// Prefix Mixin
+@mixin prefix($name, $value){
+    // -webkit-$name: $value;
+       // -moz-$name: $value;
+        // -ms-$name: $value;
+         // -o-$name: $value;
+            // $name: $value;
+}
+
+// Fonts
 // Sans-Serif Body Font Stack
 @mixin body-font_stack($weight:$body-weight, $size:$body-size){
-	font-family: $body-family;
-	font-size: $size;
-	font-weight: $weight;
-	font-style: normal;
-	line-height: 2.7rem;
+    font-family : $body-family;
+    font-size   : $size;
+    font-weight : $weight;
+    font-style  : normal;
+    line-height : 2.7rem;
 }
 
 // Header Font Stack
 @mixin header-font_stack($weight:$header-weight, $size:$h1-size){
-	font-size: $size;
-	font-style: normal;
-	line-height: $size;
+    font-size   : $size;
+    font-style  : normal;
+    line-height : $size;
 }
-//}}}
