@@ -1,115 +1,51 @@
-// COLORS
-$light_blue : #009fff;
-$dark_blue  : #60A8CD;
-$green      : #87FFAF;
-$red        : #FF2E4C;
-$dark_red   : darken($red, 25%);
-$white      : #F1F3F4;
-$black      : #1A1A1A;
+/* *----------------------------------------{{{
+ * Author    : Kristopher Watts
+ * Email     : kristopher.a.watts@gmail.com
+ * Website   : http://Webtastic-Development.net
+ * Github    : https://github.com/uncledozer
+ * License   : GNU (See License.MD for Details)
+ * Copywrite : 2015
+ * *----------------------------------------}}}
+ */
 
-// BREAKPOINTS
+/* *----------------------------------------
+ * BREAKPOINTS{{{
+ * *----------------------------------------
+ *
+ * Use min-device-width for Ios devices
+ * *------------------------
+ *
+ * $smartphone-landscape : (min-device-width: 321px);
+ * $smartphone-portrait  : (max-device-width: 320px);
+ * $tablet-landscape     : (min-device-width: 768px);
+ * $tablet-portrait      : (max-device-width: 769px);
+ * $desktop              : (min-width: 1224px);
+ * $desktop-large        : (min-width: 1824px);
+ * @include breakpoint(breakpointname){
+ *   Styles
+ * }
+ */
 
-
-// STYLES
-// Colors
-$base-bg             : $black;
-
-// Shadows
-$shadow-down         : 0px 5px 0 3px rgba(black, .3);
-$shadow-left_down    : -3px 5px 0 3px rgba(black, .3);
-$shadow-right_down   : 3px 5px 0 3px rgba(black, .3);
-//$shadow-solid      : 0 2px 0px rgba(grey, .6);
-$shadow-solid        : inset 0 -5px 0 -2px rgba(black, .6);
-
-
-// FONT VARIABLES
-
-// Font Families
-$header-family       : 'bebas_neuebold', 'Open Sans', sans-serif;
-$subheader-family    : 'bebas_neuelight', 'Open Sans', sans-serif;
-$body-family         : 'Aileron', 'Arial', sans-serif;
-$mono-family         : 'monofur for Powerline', 'Droid Sans Mono';
-
-// Weights
-$font-weight_light   : 300;
-$font-weight_reg     : 400;
-$font-weight_bold    : 600;
-$font-weight_bolder  : 700;
-
-// Size
-$font-size_small     : .9rem;
-$font-size_reg       : 1.6rem;
-$font-size_tall      : 2.0rem;
-$font-size_taller    : 2.6rem;
-$font-size_tallest   : 4.5rem;
-
-
-// FONT STYLE
-
-// Text Shadows
-
-$shadow-text         : 1px 5px rgba(black, .3);
-$shadow-text_small   : 1px 2px rgba(black,.3);
-$shadow-first_letter : 5px 7px rgba(black, .3);
-
-// Links
-$link-color          : $light_blue;
-$link-weight         : $font-weight_reg;
-$link-size           : $font-size_reg;
-$link-visited_color  : $dark_blue;
-$link-visited_weight : $font-weight_light;
-$link-hover_color    : $green;
-
-// Headers
-$header-color        : $red;
-$header-weight       : $font-weight_reg;
-$h1-size             : $font-size_tallest;
-$foot-header         : $font-size_tallest;
-
-$h2-size             : $font-size_taller;
-$h2-weight           : $font-weight_bold;
-
-$h3-size             : $font-size_reg;
-$h3-weight           : $font-weight_light;
-
-// Body
-$body-color          : $white;
-$body-weight         : $font_weight_reg;
-$body-size           : $font-size_reg;
-
-//MonoSpace
-$mono-weight         : $font-weight_reg;
-$mono-size           : $font-size_reg;
-$mono-line_height    : $mono-size;
-$mono-bg             : lighten($black, 10%);
-$mono-color          : $green;
-$mono-padding        : $mono-line_height;
-$mono-radius         : 3px;
-$mono-shadow         : $shadow-solid;
-$mono-top_border     : 2px solid lighten($black, 15%);
-
-// Strong
-$strong-color        : $white;
-$strong-text_shadow  : $shadow-text;
-$strong-text_size    : $body-size + .2;
-$strong-weight       : $font-weight_bold;
-
-
-// MIXINS
-
-// Prefix Mixin
-@mixin prefix($name, $value){
-    // -webkit-$name: $value;
-       // -moz-$name: $value;
-        // -ms-$name: $value;
-         // -o-$name: $value;
-            // $name: $value;
+@mixin breakpoint($point){
+    @if $point == breakpoint{
+        @media (min-width: pointwidth){ @content; }
+    }
 }
+
+/* }}}
+ *----------------------------------------
+ */
+
+
+/* *----------------------------------------
+ * MIXINS{{{
+ * *----------------------------------------
+ */
 
 // Fonts
 // Sans-Serif Body Font Stack
 @mixin body-font_stack($weight:$body-weight, $size:$body-size){
-    font-family : $body-family;
+    font-family : $content-font_family;
     font-size   : $size;
     font-weight : $weight;
     font-style  : normal;
@@ -122,3 +58,7 @@ $strong-weight       : $font-weight_bold;
     font-style  : normal;
     line-height : $size;
 }
+
+/* }}}
+ * *----------------------------------------
+ */

@@ -1,17 +1,68 @@
+/*
+ * *----------------------------------------
+ * Header Style Tree {{{
+ * *----------------------------------------
+ *     header
+ *         h1.header--logo
+ *         nav.header--nav
+ *             ul.header--nav--list
+ *                 li.header--nav--list--item
+ *                     a
+ * }}}
+ */
+
+$header-margin_bottom: 0px;
+$header-max_width: 1200px;
+
+$header--logo-padding: 35px 0 10px 0;
+$header--logo-text_shadow: $shadow-text;
+$header--logo-word_spacing: 10px;
+$header--logo--fletter-font_size: 8rem;
+$header--logo--fletter-text_shadow: $shadow-first_letter;
+
 header{
-	margin-bottom: 95px;
+    position: relative;
+    display: block;
+    max-width: $header-max_width;
+    margin-bottom: $header-margin_bottom;
+    margin-right: auto; margin-left: auto;
+}
 
-	h1{
-		display: block;
-		padding: 35px 0 10px 65px;
-		text-shadow: $shadow-text;
-		word-spacing: 10px;
+.header--logo{
+    display: inline-block;
+    padding: $header--logo-padding;
+    text-shadow: $header--logo-text_shadow;
+    word-spacing: $header--logo-word_spacing;
+    /* margin-right: auto; margin-left: auto; */
 
-		&:first-letter{
-			display: block;
-			font-size: 8.0rem;
-			text-shadow: $shadow-first_letter;
-		}
-	}
+    &:first-letter{
+        display: block;
+        font-size: $header--logo--fletter-font_size;
+        text-shadow: $header--logo--fletter-text_shadow;
+    }
+
+    @media only screen and ( max-width: $point-tablet ){
+        display: block;
+        padding: 0px;
+        text-align: center;
+        margin-right: auto; margin-left: auto;
+        max-width: 500px;
+    }
+
+}
+
+.header--nav{
+    margin: 0 auto;
+    text-align: center;
+
+    .header--nav--list {
+        @extend .nolist;
+    }
+
+    .header--nav--list--item{
+        display: inline-block;
+        margin: 0 15px;
+    }
+
 }
 
