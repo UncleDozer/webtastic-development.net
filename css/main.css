@@ -1,6 +1,6 @@
 @import url(normalize.css);
 /* *----------------------------------------
- * Global Variables{{{
+ * GLOBAL VARIABLES{{{
  * *----------------------------------------
  * 1: Colors
  * 2: Global Styles
@@ -126,12 +126,12 @@ header {
  * *----------------------------------------
  * Content Style Tree {{{
  * *----------------------------------------
- *     article.content
- *         h2.content--header
- *         p.content--text
- *         figure.content--figure
- *             code.content--code
- *             figcaption.content--code--caption
+ * article.content
+ *     h2.content--header
+ *     p.content--text
+ *     figure.content--figure
+ *         code.content--code
+ *         figcaption.content--code--caption
  * }}}
  */
 .content {
@@ -180,10 +180,22 @@ code {
   margin-top: 10px;
   font-style: italic; }
 
+/*
+ * *----------------------------------------
+ * Footer Style Tree {{{
+ * *----------------------------------------
+ * footer
+ *     h1.footer--logo
+ *
+ *
+ *
+ *
+ * }}}
+ */
 footer .footer-head {
   position: relative;
   display: inline-block;
-  color: #F72D4A;
+  color: #FF2E4C;
   font-size: 4.73684rem;
   padding-top: 15px; }
 
@@ -207,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 4.5rem;
   font-style: normal;
   line-height: 4.5rem;
-  color: #F72D4A;
+  color: #FF2E4C;
   width: auto;
   height: auto; }
 
@@ -246,10 +258,10 @@ a {
   color: #2EB9FF;
   outline: none; }
   a:visited {
-    color: #60A8CD;
+    color: #31789C;
     font-weight: 300; }
   a:hover, a:focus {
-    color: #87FFAF; }
+    color: #7ED65A; }
 
 strong {
   font-weight: 600;

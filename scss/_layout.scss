@@ -78,24 +78,24 @@ strong {
     font-size: $strong-text_size;
 }
 
-.seam{
+.seam {
     border: 0px;
     border-style: solid;
     border-color: darken($black, 20%);
 
-    &.bottom{
+    &.bottom {
         border-bottom-width: 2px;
         box-shadow: 0 1px 0 0 lighten($black, 15%), 0 2px 2px lighten($black, 10%);
     }
 
-    &.top{
+    &.top {
         box-shadow: 0 -1px 0 0 lighten($black, 10%), 0 2px 5px lighten($black, 15%);
         border-top-width: 2px;
     }
 }
 
 
-.nolist{
+.nolist {
     list-style: none;
     padding: 0;
 
@@ -104,7 +104,7 @@ strong {
     }
 }
 
-nav{
+nav {
     a{
         text-shadow: $shadow-text_small;
     }

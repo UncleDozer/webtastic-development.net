@@ -20,7 +20,7 @@ $header--logo-word_spacing: 10px;
 $header--logo--fletter-font_size: 8rem;
 $header--logo--fletter-text_shadow: $shadow-first_letter;
 
-header{
+header {
     position: relative;
     display: block;
     max-width: $header-max_width;
@@ -28,14 +28,14 @@ header{
     margin-right: auto; margin-left: auto;
 }
 
-.header--logo{
+.header--logo {
     display: inline-block;
     padding: $header--logo-padding;
     text-shadow: $header--logo-text_shadow;
     word-spacing: $header--logo-word_spacing;
     /* margin-right: auto; margin-left: auto; */
 
-    &:first-letter{
+    &:first-letter {
         display: block;
         font-size: $header--logo--fletter-font_size;
         text-shadow: $header--logo--fletter-text_shadow;
@@ -51,7 +51,7 @@ header{
 
 }
 
-.header--nav{
+.header--nav {
     margin: 0 auto;
     text-align: center;
 

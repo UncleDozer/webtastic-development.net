@@ -1,11 +1,26 @@
-$foot-head_color: $red;
+/*
+ * *----------------------------------------
+ * Footer Style Tree {{{
+ * *----------------------------------------
+ * footer
+ *     h1.footer--logo
+ *
+ *
+ *
+ *
+ * }}}
+ */
 
-footer{
-    .footer-head{
+$footer--head-font_size: $foot-header;
+$footer--head-color: $red;
+$footer--head-padding_top: 15px;
+
+footer {
+    .footer-head {
         position: relative;
         display: inline-block;
-        color: $foot-head_color;
-        font-size: $foot-header / .95;
-        padding-top: 15px;
+        color: $footer--head-color;
+        font-size: $footer--head-font_size;
+        padding-top: $footer--head-padding_top;
     }
 }

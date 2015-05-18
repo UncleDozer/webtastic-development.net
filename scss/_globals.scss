@@ -1,5 +1,5 @@
 /* *----------------------------------------
- * Global Variables{{{
+ * GLOBAL VARIABLES{{{
  * *----------------------------------------
  * 1: Colors
  * 2: Global Styles
@@ -15,9 +15,9 @@
  */
 
 $blue       : #2EB9FF;
-$dark_blue  : #60A8CD;
-$green      : #87FFAF;
-$red        : #F72D4A;
+$dark_blue  : #31789C;
+$green      : #7ED65A;
+$red        : #FF2E4C;
 $dark_red   : darken($red, 25%);
 $white      : #F1F3F4;
 $black      : #1A1A1A;
@@ -88,7 +88,7 @@ $link-hover_color    : $green;
 $header-color        : $red;
 $header-weight       : $font-weight_reg;
 $h1-size             : $font-size_tallest;
-$foot-header         : $font-size_tallest;
+$foot-header         : $font-size_tallest / .95;
 
 $h2-size             : $font-size_taller;
 $h2-weight           : $font-weight_bold;
