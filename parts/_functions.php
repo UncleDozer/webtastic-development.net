@@ -2,12 +2,16 @@
 /**
  * @Author Kristopher Watts <kristopher.a.watts@gmail.com>
  * @Copywrite 2015 Kristopher Watts
+ *
+ * Functions
  */
+
+require_once( 'contrib/parsedown.php' );
 
 /**
  * Fetch template piece using either
  * include_once() or require_once()
- * and makes for prettier templates
+ * Makes for prettier templates
  *
  * @Example part( 'header' );
  *
@@ -25,32 +29,24 @@ function part( $part, $required=false ) {
 }
 
 /**
- * Create simple navigation menu
+ * Pull content based on $location var
  *
- * @Example nav( "about", "header" );
- * @Param   string|array $navLink A variable or array
- * of variables containing page links
+ * @Author Kristopher Watts <kristopher.a.watts@gmail.com>
+ * @Param  string $location returns the current location var (set in each template file)
+ * @Todo   Markdown Support
  *
- * @Param   string $class The CSS
- * class to apply to the <nav> item
- *
- * @Return  string A fleshed out <nav> object (html)
- * containing links to the page objects
  */
-function nav( $navLink, $class="" ) {
-    $i = 0;
-    $linkItem = [];
 
-    foreach ( $navLink as $link ) {
-        $indent         = '    ' . "\n";
-        $listItem       = "<li class=\"".$class."--nav--list--item\">";
-        $anchorItem     = "<a href=\"".stringtolower($link)."\">" . $link . "</a></li>";
-        $linkHTML[ $i ] = $indent . $ulistItem . $indent . $anchorItem . "";
-        $i++;
+function content( $loc ) {
+    $Parsedown = new Parsedown();
+    /* $Parsedown->setMarkupEscaped( true ); */
+    $filePart = "content/$loc.md";
+
+    if ( file_exists( $filePart ) ) {
+        $fileContents = file_get_contents( "$filePart" );
+        echo $Parsedown->text( $fileContents );
+    } else {
+        // echo $Parsedown->errPage( '404' );
+        echo "ERROR $filePart not found";
     }
-
-    $navItem   = "<nav class =\"".$class."--nav\">";
-    $ulistItem = "<ul class  =\"".$class."--nav--list\">";
 }
-
-?>

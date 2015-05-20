@@ -93,8 +93,9 @@ $foot-header         : $font-size_tallest / .95;
 $h2-size             : $font-size_taller;
 $h2-weight           : $font-weight_bold;
 
-$h3-size             : $font-size_reg;
-$h3-weight           : $font-weight_light;
+$h3-size             : $font-size_tall;
+$h3-weight           : $font-weight_bold;
+$h3-shadow           : $shadow-text;
 
 // Body
 $body-color          : $white;

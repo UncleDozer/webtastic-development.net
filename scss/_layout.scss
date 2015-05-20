@@ -8,6 +8,7 @@
 
 * {
     box-sizing: border-box;
+    word-spacing: 3px;
 }
 
 html {
@@ -47,7 +48,10 @@ h2 {
 }
 
 h3 {
+    @extend h2;
     font-size: $h3-size;
+    font-weight: $h3-weight;
+    text-shadow: $h3-shadow;
 }
 
 p {

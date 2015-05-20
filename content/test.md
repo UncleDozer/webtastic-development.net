@@ -1,3 +1,7 @@
+<!--
+vim:filetype=html
+-->
+
 <article class="content">
     <h2 class="content--header">Bacon Ipsum</h2>
 

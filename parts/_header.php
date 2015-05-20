@@ -12,9 +12,10 @@
 
     <nav class="header--nav">
         <ul class="header--nav--list">
-            <li class="header--nav--list--item"><a href="#">Home</a></li>
-            <li class="header--nav--list--item"><a href="#">Projects</a></li>
-            <li class="header--nav--list--item"><a href="#">About Me</a></li>
+            <li class="header--nav--list--item"><a href="index.php">Home</a></li>
+            <!--<li class="header--nav--list--item"><a href="projects.php">Projects</a></li>  --!>
+            <!--<li class="header--nav--list--item"><a href="about.php">About Me</a></li>  --!>
+            <li class="header--nav--list--item"><a href="https://Github.com/UncleDozer">My Github</a></li>
         </ul>
     </nav>
 </header>

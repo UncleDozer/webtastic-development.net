@@ -11,8 +11,7 @@
  */
 require_once( 'parts/_functions.php' );
 
-/* Declare the current location */
-$location = 'home';
+$location = 'about';
 
 /* Grab required template pieces */
 part( 'head', true );
@@ -20,7 +19,7 @@ part( 'header', true );
 
 ?>
 
-<article class="content"j>
+<article class="content">
     <?php content( $location ); ?>
 </article>
 
