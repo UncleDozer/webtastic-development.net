@@ -39,3 +39,5 @@ If You're still not convinced, or you just like reading about how great I am, he
 - Bash : Experienced
 - VimL ( VimScript ) : Experienced
 
+## What Are You Waiting For?! Get In Touch Now!
+

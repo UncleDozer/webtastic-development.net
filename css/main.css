@@ -220,13 +220,48 @@ html {
 body {
   background: #1A1A1A; }
 
-h1, h2, h3, h3, h4, h5, h6 {
+h1, h2, h3, h3, h4, h5, h6, label {
   font-size: 4.5rem;
   font-style: normal;
   line-height: 4.5rem;
   color: #FF2E4C;
   width: auto;
   height: auto; }
+
+form {
+  width: 85%;
+  margin: 0 auto; }
+  form label {
+    font-size: 1.6rem;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto; }
+  form input, form textarea {
+    display: block;
+    width: 35%;
+    padding: 5px;
+    height: 3rem;
+    background: transparent;
+    box-shadow: none;
+    border: 3px solid #FF2E4C;
+    border-radius: 4px;
+    color: #2EB9FF;
+    font-size: 1.3rem;
+    margin-bottom: 25px; }
+    form input:active, form input:focus, form textarea:active, form textarea:focus {
+      border-color: #7ED65A; }
+    form input[type="submit"], form textarea[type="submit"] {
+      padding: 0;
+      background: #FF2E4C;
+      color: #1A1A1A; }
+      form input[type="submit"]:hover, form input[type="submit"] :active, form input[type="submit"] :focus, form textarea[type="submit"]:hover, form textarea[type="submit"] :active, form textarea[type="submit"] :focus {
+        background: #ff1536;
+        border-color: #ff1536; }
+  form textarea {
+    width: 50%;
+    height: 15rem; }
 
 h1 {
   font-family: 'bebas_neuebold', 'Open Sans', sans-serif;

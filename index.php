@@ -22,6 +22,8 @@ part( 'header', true );
 
 <article class="content">
     <?php content( $location ); ?>
+    <?php part( 'contact-form' ); ?>
 </article>
+
 
 <?php part( 'footer', true ); ?>
