@@ -20,7 +20,7 @@ part( 'header', true );
 
 ?>
 
-<article class="content"j>
+<article class="content">
     <?php content( $location ); ?>
 </article>
 
