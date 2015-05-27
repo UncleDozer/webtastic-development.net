@@ -29,17 +29,21 @@ function part( $part, $required=false ) {
 }
 
 /**
- * Pull content based on $location var
+ * Parse content based on $location var
+ * Markdown Compatible
  *
  * @Author Kristopher Watts <kristopher.a.watts@gmail.com>
  * @Param  string $location returns the current location var (set in each template file)
- * @Todo   Markdown Support
- *
+ * @Param  boolean $Markup if set to true then do not escape markup, if false then escape markup
+ * @Var    string $filePart the name of a markdown file
+ * @Var    string $fileContents a string containing the contents of $filePart to be parsed by $Parsedown
  */
-
-function content( $loc ) {
+function content( $loc, $markup = true ) {
     $Parsedown = new Parsedown();
-    /* $Parsedown->setMarkupEscaped( true ); */
+    if ( !$markup ) {
+        $Parsedown->setMarkupEscaped( true );
+    }
+
     $filePart = "content/$loc.md";
 
     if ( file_exists( $filePart ) ) {

@@ -22,7 +22,7 @@ part( 'header', true );
 
 <article class="content">
     <?php content( $location ); ?>
-    <?php part( 'contact-form' ); ?>
+    <?php // part( 'contact-form' ); ?>
 </article>
 
 

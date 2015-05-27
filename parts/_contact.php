@@ -1,10 +1,10 @@
 <?php
 
 function contact(  ) {
-    /* if ( isset( $_POST['submit'] ) ) { */
-        $message = $_POST['message'];
-        $from = $_POST['name'];
-        $fromMail = $_POST['email'];
+    /* if ( isset( $_REQUEST['submit'] ) ) { */
+        $message = $_REQUEST['message'];
+        $from = $_REQUEST['name'];
+        $fromMail = $_REQUEST['email'];
         $to = "Kristopher.A.Watts@gmail.com";
         $mailSubject = "Message from Webtastic-Development.net";
         $headers = "From: $from <$fromMail>";
@@ -12,7 +12,7 @@ function contact(  ) {
         $toEmail = "$to";
         $message = "$fromMail\n" . $message;
         mail( $toEmail, $subject, $message, $headers );
-        echo "SUCCESS";
+        header( $_SERVER[ 'SERVERNAME' ] );
     /* } */
 }
 
