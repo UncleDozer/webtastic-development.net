@@ -20,14 +20,17 @@ If You're still not convinced, or you just like reading about how great I am, he
     - SCSS : Proficient
 - JavaScript : Proficient
     - Jquery : Proficient
+    - Ajax : Experienced
     - ECMAScript 6 : Currently Learning
 - PHP : Experienced
+- MySql : Currently Learning
 - Python : Currently Learning
 
 ### Tools
 - Git : Proficient
     - GitHub: Proficient
 - Grunt : Proficient
+- Gulp : Currently Learning
 - NPM : Proficient
 - Bower : Proficient
 - WordPress : Experienced
@@ -40,4 +43,3 @@ If You're still not convinced, or you just like reading about how great I am, he
 - VimL ( VimScript ) : Experienced
 
 ## What Are You Waiting For?! Get In Touch Now!
-
