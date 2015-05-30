@@ -12,7 +12,7 @@
 require_once( 'parts/_functions.php' );
 
 /* Declare the current location */
-$location = 'home';
+$location = getLocation();
 
 /* Grab required template pieces */
 part( 'head', true );
@@ -21,9 +21,14 @@ part( 'header', true );
 ?>
 
 <article class="content">
-    <?php content( $location ); ?>
-    <?php part( 'contact-form' ); ?>
+<?php
+    content( $location );
+
+    if ( $location == "home" ) {
+        part( 'contact-form' );
+    }
+?>
 </article>
 
 
-<?php part( 'footer', true ); ?>
+<?php  part( 'footer', true ); ?>

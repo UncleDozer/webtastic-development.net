@@ -11,7 +11,7 @@
         <!--</nav>-->
 </footer>
 
-<script src="js/main.js"></script>
+<?php jsLink( $GLOBALS[ "jsFiles" ] ); ?>
 </body>
 
 </html>

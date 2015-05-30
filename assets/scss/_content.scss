@@ -15,6 +15,7 @@ $content-width      : 90%;
 $content-max_width  : 840px;
 $content-padding    : 0 20px;
 $content-margin_top : 90px;
+$content-margin_bottom : $content-margin_top;
 
 $content--figure-width       : 95%;
 $content--figure-margins     : 15px auto;
@@ -33,12 +34,11 @@ $content--code--caption-font_style  : italic;
 
 article.content {
     position: relative;
-    margin-left: auto; margin-right: auto;
-    margin-top: $content-margin_top;
     width: $content-width;
+    margin: $content-margin_top auto $content-margin_bottom auto;
+    margin-top: $content-margin_top;
     max-width: $content-max_width;
     padding: $content-padding;
-    // text-align: center;
 
 
     h2, h3 {
@@ -98,5 +98,12 @@ article.content {
         ul {
             padding-left: 15px;
         }
+    }
+
+    hr {
+        // height: 3px;
+        @extend .seam;
+        @extend .seam.bottom;
+        margin: 40px auto;
     }
 }

@@ -7,6 +7,7 @@
  */
 
 require_once( 'contrib/parsedown.php' );
+require_once( 'parts/_site-variables.php' );
 
 /**
  * Fetch template piece using either
@@ -34,7 +35,7 @@ function part( $part, $required=false ) {
  *
  * @Author Kristopher Watts <kristopher.a.watts@gmail.com>
  * @Param  string $location returns the current location var (set in each template file)
- * @Param  boolean $Markup if set to true then do not escape markup, if false then escape markup
+ * @Param  boolean $Markup if set to true then do not escape markup, if false then escape markup (Defaults to true)
  * @Var    string $filePart the name of a markdown file
  * @Var    string $fileContents a string containing the contents of $filePart to be parsed by $Parsedown
  */
@@ -56,23 +57,38 @@ function content( $loc, $markup = true ) {
 }
 
 /**
- * Contact Form
+ * Create stylesheet links
+ *
+ * @Param string|array $stylesheets a string or array containing stylesheet links
+ */
+function styleLink( $styleLinks ) {
+    foreach ( $styleLinks as $stylesheet ) {
+        $link = "<link rel='stylesheet' href='$stylesheet'>";
+        echo $link;
+    }
+}
+
+/**
+ * Create Javascript links
+ *
+ * @Param string|array $stylesheets a string or array containing stylesheet links
+ */
+function jsLink( $jsFiles ) {
+    foreach ( $jsFiles as $js ) {
+        $link = "<scripts src='$js'></script>";
+        echo $link;
+    }
+}
+
+/**
+ * Set $location
  *
  */
-
-/*
- * function contact(  ) {
- *     if ( isset( $_POST['submit'] ) ) {
- *         $message = $_POST['message'];
- *         $from = $_POST['name'];
- *         $fromMail = $_POST['email'];
- *         $to = "Kristopher.A.Watts@gmail.com";
- *         $mailSubject = "Message from Webtastic-Development.net";
- *         $headers = "From: $from <$fromMail>";
- *         $subject = "$mailSubject";
- *         $toEmail = "$to";
- *         $message = "$fromMail\n" . $message;
- *         mail( $toEmail, $subject, $message, $headers );
- *     }
- * }
- */
+function getLocation() {
+    if ( isset( $_GET[ 'location' ] ) ) {
+        $location = $_GET[ 'location' ];
+    } else {
+        $location = "home";
+    }
+    return $location;
+}
