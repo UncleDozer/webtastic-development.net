@@ -1,11 +1,16 @@
+/**
+ * @Author Kristopher Watts <kristopher.a.watts@gmail.com>
+ * @CopyWrite 2015 Kristopher Watts
+ * @Website http://Webtastic-Development.net
+ */
+
 /* *----------------------------------------
- * GLOBAL VARIABLES{{{
+ * GLOBAL VARIABLES
  * *----------------------------------------
  * 1: Colors
  * 2: Global Styles
  * 3: Typography
  * 4: Breakpoints
- * }}}
  * ----------------------------------------
  */
 
@@ -14,14 +19,66 @@
  * *----------------------------------------
  */
 
-$blue       : #2EB9FF;
-$dark_blue  : #31789C;
-$green      : #7ED65A;
-$red        : #FF2E4C;
-$dark_red   : darken($red, 25%);
-$white      : #F1F3F4;
-$black      : #1A1A1A;
-$grey       : #343434;
+
+@mixin colorScheme( $pallete: "original" ) {
+    @if $pallete == "original" {
+        //Original
+        $blue       : #2EB9FF !global;
+        $green      : #5BD65A !global;
+        $red        : #FF2E4C !global;
+        $white      : #F1F3F4 !global;
+        $black      : #1A1A1A !global;
+        $grey       : #343434 !global;
+
+        // $grey       : lighten($black, 25%) !global;
+        $dark_blue  : darken($blue, 20%) !global;
+        $dark_green : darken($green, 20%) !global;
+        $dark_red   : darken($red, 20%) !global;
+
+        // 1.1: Typographic Colors
+        /* ---------------------- */
+        // Original
+        $link-visited_color : $green !global;
+        $link-color         : $green !global;
+        $link-hover_color   : $blue !global;
+        $h-color            : $blue !global;
+        $content-color      : $white !global;
+        $body-background    : $black !global;
+        $mono-color         : $green !global;
+        $mono-bg            : lighten($black, 10%) !global;
+        $strong-color       : $blue !global;
+        $shadow-color: rgba( black, .6 ) !global;
+        $text-shadow-color: rgba( black, .4 ) !global;
+
+    } @else if $pallete = "spring" {
+        // Spring Pallete
+        $white : #E5FFEB !global;
+        $blue  : #25A3F9 !global;
+        $red   : #E61039 !global;
+        $green : #11F07E !global;
+        $black : #3C3C3C !global;
+
+        $grey       : lighten($black, 25%) !global;
+        $dark_blue  : darken($blue, 20%) !global;
+        $dark_green : darken($green, 20%) !global;
+
+        $link-color         : $green !global;
+        $link-visited_color : darken($link-color, 15%) !global;
+        $link-hover_color   : lighten($link-color, 15%) !global;
+        $h-color            : $blue !global;
+        $body-background    : $white !global;
+        $mono-color         : $black !global;
+        $mono-bg            : lighten($black, 10%) !global;
+        $strong-color       : $blue !global;
+        $content-color      : $black !global;
+        $shadow-color: rgba( black, .4 ) !global;
+    }
+}
+
+@include colorScheme();
+
+// 1.2 Global Shadow Colors
+/* ---------------------- */
 
 /* }}}
  * *----------------------------------------
@@ -33,10 +90,21 @@ $grey       : #343434;
  */
 
 /* Box-Shadows */
-$shadow-down         :  0px 5px 0 3px rgba(black, .3);
-$shadow-left_down    : -3px 5px 0 3px rgba(black, .3);
-$shadow-right_down   :  3px 5px 0 3px rgba(black, .3);
+$shadow-down         :  0px 1px 8px 2px rgba(black, .8);
+$shadow-up           :  inset 0px 6px 8px 2px $shadow-color;
+$shadow-left_down    : -3px 5px 0 3px $shadow-color;
+$shadow-right_down   :  1px 4px 5px 3px $shadow-color;
 $shadow-solid        :  inset 0 -5px 0 -2px rgba(black, .6);
+
+/* Text Shadows */
+$shadow-text         : 4px 4px $text-shadow-color;
+$shadow-text_small   : 3px 3px $text-shadow-color;
+$shadow-first_letter : 5px 7px $text-shadow-color;
+
+
+$seam-shadow   : 0 4px 6px 1px $shadow-color;
+$footer-shadow : $shadow-up;
+$header-shadow : $shadow-down;
 
 /* }}}
  * *----------------------------------------
@@ -51,8 +119,8 @@ $shadow-solid        :  inset 0 -5px 0 -2px rgba(black, .6);
 
 // Font Families
 $header-font_family       : 'bebas_neuebold', 'Open Sans', sans-serif;
-$subheader-font_family    : 'bebas_neuelight', 'Open Sans', sans-serif;
 $content-font_family      : 'Aileron', 'Arial', sans-serif;
+$h2-font_family           : 'bebas_neuelight', 'Open Sans', sans-serif;
 $mono-font_family         : 'Office Code Pro', 'Droid Sans Mono' monospace;
 
 // Weights
@@ -69,36 +137,28 @@ $font-size_tall      : 2.0rem;
 $font-size_taller    : 2.6rem;
 $font-size_tallest   : 4.5rem;
 
-// Text Shadows
-$shadow-text         : 1px 5px rgba(black, .3);
-$shadow-text_small   : 1px 2px rgba(black,.3);
-$shadow-first_letter : 5px 7px rgba(black, .3);
-
 /* Typographic Styles ----{{{ */
 
 // Links
-$link-color          : $blue;
 $link-weight         : $font-weight_reg;
 $link-size           : $font-size_reg;
-$link-visited_color  : $dark_blue;
 $link-visited_weight : $font-weight_light;
-$link-hover_color    : $green;
+$link-shadow         : $shadow-text_small;
 
 // Headers
-$header-color        : $red;
 $header-weight       : $font-weight_reg;
 $h1-size             : $font-size_tallest;
 $foot-header         : $font-size_tallest / .95;
 
-$h2-size             : $font-size_taller;
+$h2-size             : $font-size_taller * 1.25;
+$h2-shadow           : $shadow-text_small;
 $h2-weight           : $font-weight_bold;
 
-$h3-size             : $font-size_tall;
+$h3-size             : $font-size_taller;
 $h3-weight           : $font-weight_bold;
-$h3-shadow           : $shadow-text;
+$h3-shadow           : $shadow-text_small;
 
 // Body
-$body-color          : $white;
 $body-weight         : $font_weight_reg;
 $body-size           : $font-size_reg;
 
@@ -106,15 +166,12 @@ $body-size           : $font-size_reg;
 $mono-weight         : $font-weight_reg;
 $mono-size           : $font-size_reg;
 $mono-line_height    : $mono-size;
-$mono-bg             : lighten($black, 10%);
-$mono-color          : $green;
 $mono-radius         : 3px;
 $mono-shadow         : $shadow-solid;
 $mono-top_border     : 2px solid lighten($black, 15%);
 
 // Strong
-$strong-color        : $white;
-$strong-text_shadow  : $shadow-text;
+$strong-text_shadow  : $shadow-text_small;
 $strong-text_size    : $body-size + .2;
 $strong-weight       : $font-weight_bold;
 /* ----}}} */

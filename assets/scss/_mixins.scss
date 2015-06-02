@@ -1,0 +1,53 @@
+/**
+ * @Author Kristopher Watts <kristopher.a.watts@gmail.com>
+ * @CopyWrite 2015 Kristopher Watts
+ * @Website http://webtastic-development.net/SECCSY
+ *
+ */
+
+/**
+ * Vendor Prefixes!
+ */
+@mixin prefix( $value, $suffix, $prefixes:( '-webkit-#{$suffix}', '-moz-#{$suffix}', '-o-#{$suffix}', '-ms-#{$suffix}', '#{$suffix}' ) ) {
+    @each $prefix in $prefixes {
+        $prefix: $value;
+        //" REMOVE
+    }
+}
+
+
+/**
+ * Create an element to fill remaining
+ * width of container element
+ *
+ */
+@mixin filler( $float: right, $maxWidth: 'null' ) {
+    overflow: hidden;
+    float: $float;
+
+    @if $maxWidth == 'null' {
+    // Do nothing
+    } @else {
+        // Assign Max Width
+        max-width: $maxWidth;
+    }
+}
+
+// Control progress bar colors
+@mixin progressBar( $class ) {
+    #{$class}::-webkit-progress-value {
+        @content;
+    }
+
+    #{$class}::-moz-progress-bar {
+        @content;
+    }
+}
+
+@mixin filter( $value ) {
+    @include prefix( $value, "filter" );
+}
+
+@mixin transform( $value ) {
+    @include prefix( $value, "transform" );
+}

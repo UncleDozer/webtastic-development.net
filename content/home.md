@@ -7,11 +7,12 @@ Hello there! My name is Kristopher Watts, and I am a self taught web developer. 
 Passion, enthusiasm, an eagerness to learn new things, a diverse skillset, and fantastic home cooked meals.
 
 ## Enough About Me, Let's Hear More About Me
-If you're looking for an <strong>AWESOME</strong> developer, than look no further. This is your last stop. By hiring me, your company will gain at least <strong>10 COOL POINTS.</strong>
-*Advisory: Cool Points Not Legal Tender*
+If you're looking for an <strong>AWESOME</strong> developer, then look no further. This is your last stop. By hiring me, your company will gain at least <strong>10 COOL POINTS.</strong>
+
+*\*Advisory: Cool Points Not Legal Tender*
 
 ## Still Not Convinced?
-If You're still not convinced, or you just like reading about how great I am, here's a big ol' list of languages I know.
+If you're still not convinced, or you just like reading about how great I am, here's a big ol' list of languages I know.
 
 ### Web Related
 - HTML5 : Proficient

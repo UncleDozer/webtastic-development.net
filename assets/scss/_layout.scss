@@ -8,15 +8,16 @@
 
 * {
     box-sizing: border-box;
+    font-kerning: normal;
     word-spacing: 3px;
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 80.5%;
 }
 
 body {
-    background: $black;
+    background: $body-background;
 }
 
 h1,
@@ -27,7 +28,7 @@ h5,
 h6,
 label {
     @include header-font_stack();
-    color: $header-color;
+    color: $h-color;
     width: auto;
     height: auto;
 }
@@ -35,8 +36,10 @@ label {
 form {
     width: 85%;
     margin: 0 auto;
+    font-size: $body-size;
 
     label {
+        @extend h3;
         font-size: $font-size_reg;
         display: block;
         margin: 0;
@@ -52,11 +55,12 @@ form {
         height: 3.0rem;
         background: transparent;
         box-shadow: none;
-        border: 3px solid $red;
+        border: 5px solid $blue;
         border-radius: 4px;
+        box-shadow: 0 0 5px rgba( black, .3 );
         color: $blue;
-        font-size: $font-size_smallish;
         margin-bottom: 25px;
+        transition: all .25s;
 
         @media only screen and ( max-width: $point-phone ) {
             width: 100%;
@@ -64,19 +68,33 @@ form {
 
         &:active, &:focus {
             border-color: $green;
+            box-shadow: $shadow-right_down;
         }
 
         &[type="submit"] {
-            // font-size: $font-size_tall;
+            font-size: $font-size_tall;
+            font-weight: $font-weight_bold;
             padding: 0;
-            background: $red;
-            color: $black;
+            background: $blue;
+            color: $white;
+            width: 50%;
+            height: auto;
+            text-shadow: 3px 2px rgba( black, .2 );
+
+                @media only screen and ( max-width: $point-phone ) {
+                    width: 100%;
+                }
+
 
             &:hover, :active, :focus {
-                background: darken( $red, 5% );
-                border-color: darken( $red, 5% );
+                background: $green;
+                border-color: $green;
             }
         }
+    }
+
+    input {
+        height: $body-size * 2.5;
     }
 
     textarea {
@@ -98,10 +116,10 @@ h1 {
 }
 
 h2 {
-    font-family: $subheader-font_family;
+    font-family: $h2-font_family;
     font-size: $h2-size;
     font-weight: $h2-weight;
-    text-shadow: $shadow-text;
+    text-shadow: $h2-shadow;
     letter-spacing: 2px;
 }
 
@@ -113,15 +131,18 @@ h3 {
 }
 
 p {
-    color: $body-color;
+    color: $content-color;
     @include body-font_stack;
+    text-shadow: $shadow-text_small;
     text-align: left;
 }
 
 a {
-    @include body-font_stack($link-weight, $link-size);
+    @include body-font_stack($link-weight, $body-size);
+    text-shadow: $link-shadow;
     color: $link-color;
     outline: none;
+    transition: color .25s;
 
     &:visited {
         color: $link-visited_color;
@@ -130,6 +151,14 @@ a {
 
     &:hover, &:focus {
         color: $link-hover_color;
+        transition: all .25s;
+    }
+
+    & strong {
+        &:hover, &:focus {
+            color: $red;
+            transition: color .25s;
+        }
     }
 }
 
@@ -140,19 +169,23 @@ strong {
     font-size: $strong-text_size;
 }
 
-.seam {
-    border: 0px;
-    border-style: solid;
-    border-color: darken($black, 20%);
+em {
+    @extend strong;
+    font-size: $body-size;
+    font-weight: $font-weight_reg;
+}
 
+.seam {
+    border: none;
+    background-color: $blue;
+    height: 7px;
     &.bottom {
-        border-bottom-width: 2px;
-        box-shadow: 0 1px 0 0 lighten($black, 15%), 0 2px 2px lighten($black, 10%);
+        // box-shadow: 3px 4px 7px rgba(black, .9);
+        box-shadow: $seam-shadow;
     }
 
     &.top {
-        box-shadow: 0 -1px 0 0 lighten($black, 10%), 0 2px 5px lighten($black, 15%);
-        border-top-width: 2px;
+        box-shadow: -3px 4px 7px rgba(black, .9);
     }
 }
 

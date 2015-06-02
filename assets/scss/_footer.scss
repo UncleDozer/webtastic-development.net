@@ -12,15 +12,15 @@
  */
 
 $footer--head-font_size: $foot-header;
-$footer--head-color: $red;
-$footer--head-padding_top: 15px;
 
 footer {
-    .footer-head {
+    box-shadow: $footer-shadow;
+    padding-top: 15px;
+    .footer--logo {
         position: relative;
         display: inline-block;
-        color: $footer--head-color;
+        margin: 0;
+        padding: 15px 35px;
         font-size: $footer--head-font_size;
-        padding-top: $footer--head-padding_top;
     }
 }

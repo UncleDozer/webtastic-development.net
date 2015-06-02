@@ -1,5 +1,3 @@
-<hr class="seam top">
-
 <footer>
     <h1 class="footer--logo">Webtastic </br> Development</h1>
     <!--<nav class="footer--nav">-->

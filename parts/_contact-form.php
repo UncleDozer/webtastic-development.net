@@ -11,6 +11,6 @@
     <input type="text" name="email" />
     <label for="message">Message</label>
     <textarea name="message"></textarea>
-    <input type="submit" name="submit" value="submit" />
+    <input type="submit" name="submit" value="Submit" />
 </form>
 

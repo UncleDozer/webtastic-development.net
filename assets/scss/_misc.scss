@@ -1,0 +1,13 @@
+//Progress Bars
+progress {
+    @include prefix( "appearance:", "none" );
+    vertical-align: baseline;
+    height: $body-size * .85;
+    background: transparent;
+    border: 1px solid;
+    color: $blue;
+}
+
+@include progressBar( ".html" ) {
+    background-color: $blue;
+}

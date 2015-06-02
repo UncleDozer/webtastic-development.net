@@ -19,4 +19,3 @@
         </ul>
     </nav>
 </header>
-<hr class="seam bottom">
