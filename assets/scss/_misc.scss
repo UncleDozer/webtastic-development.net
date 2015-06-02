@@ -2,7 +2,7 @@
 progress {
     @include prefix( "appearance:", "none" );
     vertical-align: baseline;
-    height: $body-size * .85;
+    height: $content-size * .85;
     background: transparent;
     border: 1px solid;
     color: $blue;

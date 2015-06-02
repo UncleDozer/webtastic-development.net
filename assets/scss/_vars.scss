@@ -44,7 +44,7 @@
 
 // Fonts
 // Sans-Serif Body Font Stack
-@mixin body-font_stack($weight:$body-weight, $size:$body-size){
+@mixin body-font_stack($weight: $content-weight, $size: $content-size){
     font-family : $content-font_family;
     font-size   : $size;
     font-weight : $weight;

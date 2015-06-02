@@ -47,8 +47,6 @@
 /* *----------------------------------------
  * 3: TYPOGRAPHY{{{
  * *----------------------------------------
- * @TODO : Define @fontface
- *
  */
 /* Typographic Styles ----{{{ */
 /* ----}}} */
@@ -136,7 +134,8 @@ header {
       text-align: center;
       margin-right: auto;
       margin-left: auto;
-      max-width: 500px; } }
+      max-width: 500px;
+      text-indent: 0px; } }
 
 .header--nav {
   margin: 0 auto;
