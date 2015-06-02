@@ -113,8 +113,6 @@ $header-shadow : $shadow-down;
 /* *----------------------------------------
  * 3: TYPOGRAPHY{{{
  * *----------------------------------------
- * @TODO : Define @fontface
- *
  */
 
 // Font Families
@@ -159,8 +157,8 @@ $h3-weight           : $font-weight_bold;
 $h3-shadow           : $shadow-text_small;
 
 // Body
-$body-weight         : $font_weight_reg;
-$body-size           : $font-size_reg;
+$content-weight         : $font_weight_reg;
+$content-size           : $font-size_reg;
 
 //MonoSpace
 $mono-weight         : $font-weight_reg;

@@ -18,7 +18,7 @@ Simplex is inspired by [Kirby CMS](http://www.getkirby.com).
 
 *Note:* Simplex is currently under development and probably nowhere near a release. It *is* however fully functional, though sparse on features.
 
-Built with PHP.
+Built with PHP and Parsedown.
 
 ----
 

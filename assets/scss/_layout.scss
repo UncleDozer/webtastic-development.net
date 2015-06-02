@@ -36,7 +36,7 @@ label {
 form {
     width: 85%;
     margin: 0 auto;
-    font-size: $body-size;
+    font-size: $content-size;
 
     label {
         @extend h3;
@@ -94,7 +94,7 @@ form {
     }
 
     input {
-        height: $body-size * 2.5;
+        height: $content-size * 2.5;
     }
 
     textarea {
@@ -138,7 +138,7 @@ p {
 }
 
 a {
-    @include body-font_stack($link-weight, $body-size);
+    @include body-font_stack($link-weight, $content-size);
     text-shadow: $link-shadow;
     color: $link-color;
     outline: none;
@@ -171,7 +171,7 @@ strong {
 
 em {
     @extend strong;
-    font-size: $body-size;
+    font-size: $content-size;
     font-weight: $font-weight_reg;
 }
 
