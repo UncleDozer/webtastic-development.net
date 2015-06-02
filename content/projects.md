@@ -22,13 +22,13 @@ Built with PHP.
 
 ----
 
-[__NTP__](?location=new_tab_page) - A Simple New Tab Page
+[__NTP__](/new_tab_page) - A Simple New Tab Page
 
 [Github Repository](https://github.com/UncleDozer/new_tab_page)
 
 An open source new tab page. I was tired of all the over the top extensions and new tab pages so I made my own. I am currently developing a way to make it customizable using JavaScript to learn how to better use localstorage. Progress can be seen on the [Custom Branch](https://github.com/UncleDozer/new_tab_page/tree/custom) 
 
-Built with PHP and vanilla JavaScript.
+Built with HTML and vanilla JavaScript.
 
 ----
 
