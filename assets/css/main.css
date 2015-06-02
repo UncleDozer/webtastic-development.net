@@ -120,11 +120,14 @@ header {
 
 .header--logo {
   display: block;
-  text-indent: -15%;
+  text-align: center;
   max-width: 1200px;
   text-shadow: 4px 4px rgba(0, 0, 0, 0.4);
-  word-spacing: 10px; }
+  word-spacing: 10px;
+  margin: 0 auto;
+  padding: 0px; }
   .header--logo:first-letter {
+    text-align: center;
     font-size: 8rem;
     text-shadow: 5px 7px rgba(0, 0, 0, 0.4); }
   @media only screen and (max-width: 1200px) {
@@ -134,8 +137,7 @@ header {
       text-align: center;
       margin-right: auto;
       margin-left: auto;
-      max-width: 500px;
-      text-indent: 0px; } }
+      max-width: 500px; } }
 
 .header--nav {
   margin: 0 auto;
@@ -277,10 +279,11 @@ label {
   height: auto; }
 
 form {
-  width: 85%;
+  width: 100%;
   margin: 0 auto;
   font-size: 1.6rem; }
   form label {
+    text-align: left !important;
     font-size: 1.6rem;
     display: block;
     margin: 0;
@@ -289,7 +292,7 @@ form {
     height: auto; }
   form input, form textarea {
     display: block;
-    width: 35%;
+    width: 40%;
     padding: 5px;
     height: 3.0rem;
     background: transparent;
@@ -305,7 +308,9 @@ form {
         width: 100%; } }
     form input:active, form input:focus, form textarea:active, form textarea:focus {
       border-color: #5BD65A;
-      box-shadow: 1px 4px 5px 3px rgba(0, 0, 0, 0.6); }
+      box-shadow: 1px 4px 5px 3px rgba(0, 0, 0, 0.6);
+      background-color: #343434;
+      color: #F1F3F4; }
     form input[type="submit"], form textarea[type="submit"] {
       font-size: 2rem;
       font-weight: 600;
@@ -318,9 +323,12 @@ form {
       @media only screen and (max-width: 760px) {
         form input[type="submit"], form textarea[type="submit"] {
           width: 100%; } }
-      form input[type="submit"]:hover, form input[type="submit"] :active, form input[type="submit"] :focus, form textarea[type="submit"]:hover, form textarea[type="submit"] :active, form textarea[type="submit"] :focus {
+      form input[type="submit"]:hover, form input[type="submit"] :focus, form textarea[type="submit"]:hover, form textarea[type="submit"] :focus {
         background: #5BD65A;
-        border-color: #5BD65A; }
+        border-color: #5BD65A;
+        box-shadow: 1px 4px 5px 3px rgba(0, 0, 0, 0.6); }
+      form input[type="submit"]:active, form textarea[type="submit"]:active {
+        box-shadow: inset -1px -4px 5px 3px rgba(0, 0, 0, 0.6); }
   form input {
     height: 4rem; }
   form textarea {

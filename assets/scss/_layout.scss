@@ -34,12 +34,13 @@ label {
 }
 
 form {
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
     font-size: $content-size;
 
     label {
         @extend h3;
+        text-align: left !important;
         font-size: $font-size_reg;
         display: block;
         margin: 0;
@@ -50,7 +51,7 @@ form {
 
     input, textarea {
         display: block;
-        width: 35%;
+        width: 40%;
         padding: 5px;
         height: 3.0rem;
         background: transparent;
@@ -69,6 +70,8 @@ form {
         &:active, &:focus {
             border-color: $green;
             box-shadow: $shadow-right_down;
+            background-color: $grey;
+            color: $white;
         }
 
         &[type="submit"] {
@@ -86,9 +89,14 @@ form {
                 }
 
 
-            &:hover, :active, :focus {
+            &:hover, :focus {
                 background: $green;
                 border-color: $green;
+                box-shadow: $shadow-right_down;
+            }
+
+            &:active {
+                box-shadow: inset $shadow-left_up;
             }
         }
     }

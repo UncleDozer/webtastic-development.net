@@ -32,12 +32,15 @@ header {
 
 .header--logo {
     display: block;
-    text-indent: -15%;
+    text-align: center;
     max-width: $header-max_width;
     text-shadow: $header--logo-text_shadow;
     word-spacing: $header--logo-word_spacing;
+    margin: 0 auto;
+    padding: 0px;
 
     &:first-letter {
+        text-align: center;
         font-size: $header--logo--fletter-font_size;
         text-shadow: $header--logo--fletter-text_shadow;
     }
@@ -48,7 +51,6 @@ header {
         text-align: center;
         margin-right: auto; margin-left: auto;
         max-width: 500px;
-        text-indent: 0px;
     }
 
 }
