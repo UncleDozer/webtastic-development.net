@@ -14,6 +14,7 @@
 
 html {
     font-size: 80.5%;
+    // @include rootsize();
 }
 
 body {
@@ -33,93 +34,11 @@ label {
     height: auto;
 }
 
-form {
-    width: 100%;
-    margin: 0 auto;
-    font-size: $content-size;
-
-    label {
-        @extend h3;
-        text-align: left !important;
-        font-size: $font-size_reg;
-        display: block;
-        margin: 0;
-        padding: 0;
-        width: auto;
-        height: auto;
-    }
-
-    input, textarea {
-        display: block;
-        width: 40%;
-        padding: 5px;
-        height: 3.0rem;
-        background: transparent;
-        box-shadow: none;
-        border: 5px solid $blue;
-        border-radius: 4px;
-        box-shadow: 0 0 5px rgba( black, .3 );
-        color: $blue;
-        margin-bottom: 25px;
-        transition: all .25s;
-
-        @media only screen and ( max-width: $point-phone ) {
-            width: 100%;
-        }
-
-        &:active, &:focus {
-            border-color: $green;
-            box-shadow: $shadow-right_down;
-            background-color: $grey;
-            color: $white;
-        }
-
-        &[type="submit"] {
-            font-size: $font-size_tall;
-            font-weight: $font-weight_bold;
-            padding: 0;
-            background: $blue;
-            color: $white;
-            width: 50%;
-            height: auto;
-            text-shadow: 3px 2px rgba( black, .2 );
-
-                @media only screen and ( max-width: $point-phone ) {
-                    width: 100%;
-                }
-
-
-            &:hover, :focus {
-                background: $green;
-                border-color: $green;
-                box-shadow: $shadow-right_down;
-            }
-
-            &:active {
-                box-shadow: inset $shadow-left_up;
-            }
-        }
-    }
-
-    input {
-        height: $content-size * 2.5;
-    }
-
-    textarea {
-        width: 50%;
-        height: 15rem;
-
-        @media only screen and ( max-width: $point-phone ) {
-            width: 100%;
-        }
-    }
-}
-
 h1 {
+    @include threeD( darken( $h-color, 25% ) );
     font-family: $header-font_family;
     font-weight: $header-weight;
     padding: 35px 0 10px 65px;
-    text-shadow: $shadow-text;
     word-spacing: 10px;
 }
 
@@ -127,22 +46,30 @@ h2 {
     font-family: $h2-font_family;
     font-size: $h2-size;
     font-weight: $h2-weight;
-    text-shadow: $h2-shadow;
+    @include shadow( 2, 2, 3, 0, $shadow-color, true );
     letter-spacing: 2px;
+    margin-top: $h2-size;
+    margin-bottom: 0px;
+
+    & +p {
+        margin-bottom: 15px !important;
+    }
 }
 
 h3 {
     @extend h2;
     font-size: $h3-size;
     font-weight: $h3-weight;
-    text-shadow: $h3-shadow;
 }
 
 p {
     color: $content-color;
+    font-size: $content-size;
+    line-height: $content-line_height;
     @include body-font_stack;
     text-shadow: $shadow-text_small;
     text-align: left;
+    // margin-top: 0px;
 }
 
 a {
@@ -183,20 +110,89 @@ em {
     font-weight: $font-weight_reg;
 }
 
-.seam {
-    border: none;
-    background-color: $blue;
-    height: 7px;
-    &.bottom {
-        // box-shadow: 3px 4px 7px rgba(black, .9);
-        box-shadow: $seam-shadow;
+form {
+    width: 100%;
+    margin: 0 auto;
+    font-size: $content-size;
+
+    label {
+        text-align: left !important;
+        font-size: $font-size_reg;
+        display: block;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        height: auto;
     }
 
-    &.top {
-        box-shadow: -3px 4px 7px rgba(black, .9);
+    input, textarea {
+        display: block;
+        width: 40%;
+        padding: 5px;
+        height: 3.0rem;
+        color: $blue;
+        background: transparent;
+        border: 5px solid $blue;
+        border-radius: 4px;
+        @include shadow( 2, 2, 5, 0, rgba( black, .5 ) );
+        margin-bottom: 25px;
+        transition: all .25s;
+
+        @media only screen and ( max-width: $point-phone ) {
+            width: 100%;
+        }
+
+        &:active, &:focus {
+            border-color: $green;
+            @include shadow( 3, 3, 2, 4, rgba( black, .5 ) );
+            background-color: $grey;
+            color: $white;
+        }
+
+        &[type="submit"] {
+            font-size: $font-size_tall;
+            font-weight: $font-weight_bold;
+            text-align: center;
+            padding: 0;
+            background: $blue;
+            color: $white;
+            width: 50%;
+            height: auto;
+            @include shadow( 3, 2, 0, rgba( black, .2 ), true );
+            transition: all .15s, padding 0s, border 0s;
+
+            @media only screen and ( max-width: $point-phone ) {
+                width: 100%;
+            }
+
+            &:hover, :focus {
+                background: $green;
+                border-color: $green;
+                @include shadow( 3, 3, 2, 4, rgba( black, .5 ) );
+            }
+
+            &:active {
+                border: 0px;
+                padding: 5px;
+                transition: padding 0s, border 0s;
+                @include shadow( -3, -3, 4, 1, rgba( black, .5 ), false, 'inset' );
+            }
+        }
+    }
+
+    input {
+        height: $content-size * 2.5;
+    }
+
+    textarea {
+        width: 50%;
+        height: 15rem;
+
+        @media only screen and ( max-width: $point-phone ) {
+            width: 100%;
+        }
     }
 }
-
 
 .nolist {
     list-style: none;

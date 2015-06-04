@@ -11,7 +11,6 @@
 @mixin prefix( $value, $suffix, $prefixes:( '-webkit-#{$suffix}', '-moz-#{$suffix}', '-o-#{$suffix}', '-ms-#{$suffix}', '#{$suffix}' ) ) {
     @each $prefix in $prefixes {
         $prefix: $value;
-        //" REMOVE
     }
 }
 
@@ -50,4 +49,48 @@
 
 @mixin transform( $value ) {
     @include prefix( $value, "transform" );
+}
+
+@mixin threeD( $color, $textShadow: true ) {
+    $fallback: 0px 3px 3px darken( $color, 2% );
+    $shadowVal: 0px 2px 1px darken( $color, 2% ),
+    0px 4px .5px darken( $color, 4% ),
+    0px 6px .5px darken( $color, 6% ),
+    0px 8px .5px darken( $color, 8% ),
+    3px 8px 15px rgba( black, 0.1 ),
+    3px 8px 5px rgba( black, 0.3 );
+
+    @if $textShadow == true {
+        text-shadow: $fallback;
+        text-shadow: $shadowVal;
+    } @else {
+        box-shadow: $fallback;
+        box-shadow: $shadowVal;
+    }
+}
+
+@mixin shadow( $x, $y, $blur, $size, $color, $textShadow:false, $inset: '' ) {
+    @if $textShadow == true {
+        $inset: '';
+        $nsize: '';
+        $osize: '';
+    } @else {
+        $nsize: #{ $size }px;
+        $osize: #{ $size + 1 / 1.25 }px;
+    }
+
+    $shadowVal: unquote( #{ $inset } #{ $x }px #{ $y }px #{ $blur }px #{ $nsize } #{ $color } );
+    $outerShadowVal: unquote( #{ $inset } #{ $x * 1.25 }px #{ $y * 1.25 }px #{ $osize } #{ $osize } #{ rgba( black, .3 ) } );
+
+    @if $textShadow == true {
+        /* Fallback for browsers that don't support multiple shadows */
+        text-shadow: $shadowVal;
+        /* Shadow with a further blurred shadow for a more dramatic 3d effect */
+        text-shadow: $shadowVal, $outerShadowVal;
+    } @else {
+        /* Fallback for browsers that don't support multiple shadows */
+        box-shadow: $shadowVal;
+        /* Shadow with a further blurred shadow for a more dramatic 3d effect */
+        box-shadow: $shadowVal, $outerShadowVal;
+    }
 }

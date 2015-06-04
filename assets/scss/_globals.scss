@@ -132,10 +132,10 @@ $font-weight_bolder  : 700;
 // Size
 $font-size_small     : .9rem;
 $font-size_smallish  : 1.3rem;
-$font-size_reg       : 1.6rem;
+$font-size_reg       : 1.8rem;
 $font-size_tall      : 2.0rem;
 $font-size_taller    : 2.6rem;
-$font-size_tallest   : 4.5rem;
+$font-size_tallest   : 5.5rem;
 
 /* Typographic Styles ----{{{ */
 
@@ -144,6 +144,7 @@ $link-weight         : $font-weight_reg;
 $link-size           : $font-size_reg;
 $link-visited_weight : $font-weight_light;
 $link-shadow         : $shadow-text_small;
+$nav-size            : $font-size_tall;
 
 // Headers
 $header-weight       : $font-weight_reg;
@@ -161,6 +162,7 @@ $h3-shadow           : $shadow-text_small;
 // Body
 $content-weight         : $font_weight_reg;
 $content-size           : $font-size_reg;
+$content-line_height    : $font-size_reg * 2;
 
 //MonoSpace
 $mono-weight         : $font-weight_reg;
