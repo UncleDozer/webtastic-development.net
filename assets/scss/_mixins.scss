@@ -34,10 +34,12 @@
 
 // Control progress bar colors
 @mixin progressBar( $class ) {
+    // Webkit based browsers ( chrome, opera, etc. )
     #{$class}::-webkit-progress-value {
         @content;
     }
 
+    // Gecko based browsers ( firefox, palemoon, etc. )
     #{$class}::-moz-progress-bar {
         @content;
     }
@@ -56,9 +58,10 @@
     $shadowVal: 0px 2px 1px darken( $color, 2% ),
     0px 4px .5px darken( $color, 4% ),
     0px 6px .5px darken( $color, 6% ),
-    0px 8px .5px darken( $color, 8% ),
+    0px 8px 0px darken( $color, 8% ),
     3px 8px 15px rgba( black, 0.1 ),
-    3px 8px 5px rgba( black, 0.3 );
+    3px 8px 5px rgba( black, 0.3 ),
+    0px -1px 0px lighten( $color, 45% );
 
     @if $textShadow == true {
         text-shadow: $fallback;
