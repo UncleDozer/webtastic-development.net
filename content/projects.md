@@ -18,7 +18,7 @@ Simplex is inspired by [Kirby CMS](http://www.getkirby.com).
 
 *Note:* Simplex is currently under development and probably nowhere near a release. It *is* however fully functional, though sparse on features.
 
-Built with PHP and Parsedown.
+Built with PHP and [Parsedown](http://parsedown.org).
 
 ----
 
@@ -26,13 +26,25 @@ Built with PHP and Parsedown.
 
 [Github Repository](https://github.com/UncleDozer/new_tab_page)
 
-An open source new tab page. I was tired of all the over the top extensions and new tab pages so I made my own. I am currently developing a way to make it customizable using JavaScript to learn how to better use localstorage. Progress can be seen on the [Custom Branch](https://github.com/UncleDozer/new_tab_page/tree/custom) 
+An open source new tab page. I was tired of all the over the top extensions and new tab pages so I made my own.
 
 Built with HTML and vanilla JavaScript.
 
 ----
 
 ## Work
+
+[__ShawnCagle.com__](http://shawncagle.com) - Shawn Cagle's portfolio
+
+I developed the portfolio for the amazingly talented designer, Shawn Cagle. He supplied the design and I supplied the code. 
+
+He wanted it developed using [KirbyCMS](https://getkirby.com) which is a flat-file based CMS that doesn't use MySQL. I thoroughly enjoyed working with it and created the theme from scratch.  This was my first project implementing a cms from the ground up without the use of plugins or premade themes.
+
+During development, I also built a lightweight SASS library dubbed SeCSSY. The source code will be released via GitHub after it is cleaned up and commented.
+
+Built with [KirbyCMS](https://getkirby.com), PHP, SASS, and SeCSSY
+
+----
 
 [__MyndDot.com__](http://mynddot.com) - The Homepage for the MyndDot app
 
