@@ -75,7 +75,7 @@ function styleLink( $styleLinks ) {
  */
 function jsLink( $jsFiles ) {
     foreach ( $jsFiles as $js ) {
-        $link = "<scripts src='$js'></script>";
+        $link = "<script type='text/javascript' src='$js'></script>";
         echo $link;
     }
 }
