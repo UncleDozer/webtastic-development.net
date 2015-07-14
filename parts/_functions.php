@@ -92,3 +92,13 @@ function getLocation() {
     }
     return $location;
 }
+
+/**
+ * Check Location, return active for header
+ *
+ */
+
+function activePage( $href ) {
+    if ( $_GET[ 'location' ] == $href )
+        echo "active";
+}

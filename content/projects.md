@@ -38,16 +38,18 @@ Built with HTML and vanilla JavaScript.
 
 I developed the portfolio for the amazingly talented designer, Shawn Cagle. He supplied the design and I supplied the code. 
 
-He wanted it developed using [KirbyCMS](https://getkirby.com) which is a flat-file based CMS that doesn't use MySQL. I thoroughly enjoyed working with it and created the theme from scratch.  This was my first project implementing a cms from the ground up without the use of plugins or premade themes.
+He wanted it developed using [KirbyCMS](http://getkirby.com) which is a flat-file based CMS that doesn't use MySQL. I thoroughly enjoyed working with it and created the theme from scratch.  This was my first project implementing a cms from the ground up without the use of plugins or premade themes.
 
 During development, I also built a lightweight SASS library dubbed SeCSSY. The source code will be released via GitHub after it is cleaned up and commented.
 
-Built with [KirbyCMS](https://getkirby.com), PHP, SASS, and SeCSSY
+Built with [KirbyCMS](http://getkirby.com), PHP, SASS, and SeCSSY
 
 ----
 
 [__MyndDot.com__](http://mynddot.com) - The Homepage for the MyndDot app
 
-A website built for the IOS app MyndDot. I was supplied with a PDF design. Due to issues with funding, I was unable to complete the project.
+A website built for the IOS app MyndDot. I was supplied with a PDF design.
+
+This was my first time using Ajax ( via jQuery ) on the help page. My reasoning for using Ajax is so the help page could be expanded ( I was told that the support system would contain a lot more info after a few months of the app release. )
 
 Built with PHP, Bootstrap, jQuery and Ajax.

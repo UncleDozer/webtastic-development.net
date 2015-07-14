@@ -21,13 +21,13 @@ $content--figure-width       : 95%;
 $content--figure-margins     : 15px auto;
 
 $content--code-padding       : 15px;
-$content--code-width         : 100%;
+$content--code-width         : 95%;
 $content--code-color         : $mono-color;
-$content--code-background    : $grey;
+$content--code-background    : darken( $black, 5% );
 $content--code-font_size     : $font-size_smallish;
 $content--code-font_family   : $mono-font_family;
 $content--code-border_radius : 3px;
-$content--code-shadow        : $shadow-solid;
+$content--code-shadow        : 0px 0px 3px 1px rgba( black, .2 );
 
 $content--code--caption-font_weight : $font-weight_light;
 $content--code--caption-font_style  : italic;
@@ -58,6 +58,7 @@ article.content {
 
     code {
         display          : block;
+        margin           : auto;
         width            : $content--code-width;
         padding          : $content--code-padding;
         color            : $content--code-color;
@@ -69,7 +70,6 @@ article.content {
         box-shadow       : $content--code-shadow;
         border-radius    : $content--code-border_radius;
         border-top       : $mono-top_border;
-        text-shadow      : $shadow-text_small;
 
         pre {
             padding-bottom: $content--code-padding;

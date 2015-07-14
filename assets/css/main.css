@@ -149,6 +149,9 @@ header {
   .header--nav .header--nav--list--item {
     display: inline-block;
     margin: 0 15px; }
+    .header--nav .header--nav--list--item.active {
+      color: #5BD65A;
+      border-bottom: 3px solid; }
   .header--nav a {
     text-decoration: none;
     font-size: 2rem; }
@@ -187,18 +190,18 @@ article.content {
         width: 100%; } }
   article.content code {
     display: block;
-    width: 100%;
+    margin: auto;
+    width: 95%;
     padding: 15px;
     color: #5BD65A;
     font-size: 1.3rem;
     font-family: "Office Code Pro", "Droid Sans Mono" monospace;
     font-weight: 400;
     line-height: 1.8rem;
-    background-color: #343434;
-    box-shadow: inset 0 -5px 0 -2px rgba(0, 0, 0, 0.6);
+    background-color: #0d0d0d;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
     border-radius: 3px;
-    border-top: 2px solid #404040;
-    text-shadow: 3px 3px rgba(0, 0, 0, 0.4); }
+    border-top: 2px solid #404040; }
     article.content code pre {
       padding-bottom: 15px;
       text-align: initial; }
@@ -341,8 +344,10 @@ a {
     color: #2EB9FF;
     transition: all 0.25s; }
   a strong:hover, a em:hover, a strong:focus, a em:focus {
-    color: #FF2E4C;
-    transition: color 0.25s; }
+    color: #5BD65A;
+    transition: color 0.25s;
+    outline: none;
+    text-decoration: none; }
 
 strong, em {
   font-weight: 600;
@@ -441,3 +446,5 @@ form {
 
 nav a {
   text-shadow: 3px 3px rgba(0, 0, 0, 0.4); }
+
+/*# sourceMappingURL=main.css.map */

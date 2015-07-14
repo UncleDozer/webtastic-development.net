@@ -62,6 +62,11 @@ header {
     .header--nav--list--item{
         display: inline-block;
         margin: 0 15px;
+
+        &.active {
+            color: $link-color;
+            border-bottom: 3px solid;
+        }
     }
 
     a {
