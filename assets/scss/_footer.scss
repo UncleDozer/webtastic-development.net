@@ -14,11 +14,15 @@
 $footer--head-font_size: $foot-header;
 
 footer {
+    display: block;
+    position: relative;
     box-shadow: $footer-shadow;
     padding-top: 15px;
+    height: 125px;
     .footer--logo {
         position: relative;
         display: inline-block;
+        vertical-align: middle;
         margin: 0;
         padding: 15px 35px;
         font-size: $footer--head-font_size;

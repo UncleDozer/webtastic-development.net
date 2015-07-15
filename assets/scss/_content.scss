@@ -13,14 +13,14 @@
 
 $content-width      : 90%;
 $content-max_width  : 840px;
-$content-padding    : 0 20px;
+$content-padding    : 0px 35px;
 $content-margin_top : 90px;
 $content-margin_bottom : $content-margin_top;
 
 $content--figure-width       : 95%;
 $content--figure-margins     : 15px auto;
 
-$content--code-padding       : 15px;
+$content--code-padding       : 10px;
 $content--code-width         : 95%;
 $content--code-color         : $mono-color;
 $content--code-background    : darken( $black, 5% );
@@ -34,11 +34,17 @@ $content--code--caption-font_style  : italic;
 
 article.content {
     position: relative;
-    width: $content-width;
+    width: $content-width; max-width: $content-max_width;
+
     margin: $content-margin_top auto $content-margin_bottom auto;
-    margin-top: $content-margin_top;
-    max-width: $content-max_width;
     padding: $content-padding;
+
+    /* Version 1.1? */
+    /* background-color: lighten( $black, 5% ); */
+    /* border-top: 1px solid $grey; */
+    /* border-bottom: 1px solid $black; */
+    /* border-radius: 5px; */
+    /* box-shadow: 0 5px 7px 0px rgba( 0,0,0,.25 ); */
 
 
     h2, h3 {
@@ -101,9 +107,10 @@ article.content {
     }
 
     hr {
-        // height: 3px;
-        @extend .seam;
-        @extend .seam.bottom;
-        margin: 40px auto;
+        margin: 40px -5% 40px;
+        width: 110%;
+        border: none;
+        border-top: 6px solid rgb( 10, 10, 10 );
+        border-bottom: 1px solid $grey;
     }
 }

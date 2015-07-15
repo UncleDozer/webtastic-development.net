@@ -88,6 +88,7 @@ function getLocation() {
     if ( isset( $_GET[ 'location' ] ) ) {
         $location = $_GET[ 'location' ];
     } else {
+        $_GET[ 'location' ] = "home";
         $location = "home";
     }
     return $location;
