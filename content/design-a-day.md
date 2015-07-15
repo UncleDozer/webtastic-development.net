@@ -4,3 +4,5 @@ To keep my frontend skills sharp, I've decided to code a few new designs every w
 [July 01, 2015](design-a-day/july-01): Card based Design inspired by Google's Material Design. [Source Code](https://github.com/UncleDozer/Design-A-Day/tree/master/july-01)
 
 [July 02, 2015](design-a-day/july-02): Super simple 404 page. [Source Code](https://github.com/UncleDozer/Design-A-Day/tree/master/july-02)
+
+[July 15, 2015](design-a-day/july-15): Quick site mockup. [Source Code](https://github.com/UncleDozer/Design-A-Day/tree/master/july-15)
